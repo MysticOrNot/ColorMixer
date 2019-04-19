@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Welcome to nginx!</title>
+<style>
+    html, body{
+        width: 100%; 
+        height: 100%;
+        margin: 0;
+        padding: 0
+    }
+    body{background-color: #333}
+    canvas{margin: 10px; border:1px solid #777}
+    input[type="text"]{border:1px solid #777; width: 50px}
+    #targetColor{padding: 10px; margin: 10px; width: 993px; text-align: center}
+    #colorMarker{position: absolute; width: 5px; height: 35px; border: 2px solid #ccc; display: none}
+</style>
+
+<script type="text/javascript" src="./js/index.js?1"></script>
+</head>
+<body>
+    <div><canvas id="gradientHueStart" width="1011" height="30"></canvas></div>
+    <canvas id="photo" width="492" height="267"></canvas>
+    <canvas id="fxPhoto" width="492" height="267"></canvas>
+    <br>
+    <div id="targetColor">
+        <input type="text" name="red"   value="127" placeholder="input red component">
+        <input type="text" name="green" value="127" placeholder="input green component">
+        <input type="text" name="blue"  value="127" placeholder="input blue component">
+        <span style="margin-left:10px">replace:  H</span>
+        <input type="checkbox" name="replaceH" checked>
+        <span>, L</span><input type="checkbox" name="replaceL" ><span>, S</span><input type="checkbox" name="replaceS" >
+    </div>
+    <canvas id="gradientHue" width="1011" height="30"></canvas>
+    <div id="colorMarker"></div>
+
+</body>
+</html>
